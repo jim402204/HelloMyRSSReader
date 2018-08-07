@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="wthRSSreader_Extension">
+                    <items>
+                        <table alignment="left" id="oiS-h6-ECk">
+                            <items>
+                                <tableRow identifier="NewsItemRow" id="NSs-0q-8WQ" customClass="NewsRowControler" customModule="wthRSSreader_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="PvB-UG-zv2">
+                                        <items>
+                                            <label width="1" alignment="left" text="Label" numberOfLines="0" id="r43-EP-h7c">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label width="1" alignment="left" text="Label" minimumScaleFactor="0.5" id="i3u-mY-AiY">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="data" destination="i3u-mY-AiY" id="6Mc-6U-URS"/>
+                                        <outlet property="titleLabel" destination="r43-EP-h7c" id="LMi-ee-YQl"/>
+                                        <segue destination="9VD-OS-sG2" kind="modal" id="YaB-tM-ZoZ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="newListTable" destination="oiS-h6-ECk" id="XGp-N2-ago"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="6" y="146"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="1Qa-MT-Cfp">
+            <objects>
+                <controller id="9VD-OS-sG2" customClass="detail" customModule="wthRSSreader_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.80000000000000004" id="5aU-hQ-V3M"/>
+                    </items>
+                    <connections>
+                        <outlet property="desriptionLabel" destination="5aU-hQ-V3M" id="79L-0D-kAh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="6" y="523"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="B3T-zR-EX3">
+            <objects>
+                <controller id="c8Y-dG-rnQ">
+                    <items>
+                        <group width="1" alignment="left" id="cVf-u9-Kau">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="7v8-0T-nQs"/>
+                                <button alignment="center" verticalAlignment="center" title="Button" id="KTR-MC-DA0"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <segue destination="UFl-7X-9RW" kind="relationship" relationship="nextPage" id="U0R-58-32y"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="298" y="146"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="C2r-Al-HDi">
+            <objects>
+                <controller id="UFl-7X-9RW">
+                    <items>
+                        <label alignment="left" text="Label" id="Gyf-Fk-fwW"/>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="zZD-hD-qIH"/>
+                        <paymentButton width="1" alignment="left" id="auW-7E-zfg"/>
+                        <button width="1" alignment="left" title="Button" id="naN-6n-9oZ"/>
+                        <button width="1" alignment="left" title="Button" id="n6t-5f-frP"/>
+                        <picker height="100" alignment="left" id="f3K-TU-1Gi"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="641" y="147"/>
+        </scene>
+    </scenes>
+</document>
